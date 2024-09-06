@@ -2,28 +2,25 @@
 import datetime
 import os
 
-#######################
-### 0 = Monday      ###
-### 1 = Tuesday     ###
-### 2 = Wednesday   ###
-### 3 = Thursday    ###
-### 4 = Friday      ###
-### 5 = Saturday    ###
-### 6 = Sunday      ###
-#######################
-
-#   --> bW[0,0,0,0,1,1,0] <--
-# bW[1] == 0 -> Default on Tuesday
-# bW[5] == 1 -> Saturday on config1
-# sets different custom file
-
 defaultConf = 'gammastep'
 config1 = 'gammastep -c /home/salem/.config/hypr/gammas_conf1.ini'
-booleanWeek=[0,0,0,0,1,1,0]
-now = datetime.datetime.today().weekday()
-if booleanWeek[now] == 0:
-    os.system(defaultConf+' & disown')
-elif booleanWeek[now] == 1:
-    os.system(config1)
+
+def is_weekend_config_time():
+    now = datetime.datetime.now()
+    weekday = now.weekday()
+    current_time = now.time()
+    # Venerdì dopo le 8:00
+    if weekday == 4 and current_time >= datetime.time(8, 0):
+        return True
+    # Sabato
+    elif weekday == 5:
+        return True
+    # Domenica prima delle 8:00
+    elif weekday == 6 and current_time < datetime.time(8, 0):
+        return True
+    return False
+
+if is_weekend_config_time():
+    os.system(config1 + ' & disown')
 else:
-    os.system(defaultConf)
+    os.system(defaultConf + ' & disown')

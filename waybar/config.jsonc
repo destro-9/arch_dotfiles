@@ -129,7 +129,8 @@
         "max-length": 42,
         "format-icons": {
             "spotify": "",
-            "firefox": "",
+            "firefox": "",
+            "chromium": "",
             "default": ""
         },
         "escape": true,

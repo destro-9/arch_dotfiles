@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
     "modules-center": ["idle_inhibitor", "clock"],
-    "modules-right": ["custom/media", "pulseaudio", "tray", "network", "cpu", "memory", "temperature", "backlight"],
+    "modules-right": ["custom/media", "pulseaudio", "tray", "network", "cpu", "memory", "temperature"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,

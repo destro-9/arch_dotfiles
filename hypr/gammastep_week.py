@@ -2,8 +2,9 @@
 import datetime
 import os
 
+path1 = '/home/salem/.config/hypr/gammastep/gammas_conf1.ini'
 defaultConf = 'gammastep'
-config1 = 'gammastep -c /home/salem/.config/hypr/gammas_conf1.ini'
+config1 = f'gammastep -c {path1}'
 
 def is_weekend_config_time():
     now = datetime.datetime.now()

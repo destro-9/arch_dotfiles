@@ -46,7 +46,8 @@
     },
     "clock": {
         "tooltip-format": "{:%d-%m-%Y | %H:%M}",
-        "format-alt": "{:%d-%m-%Y}"
+        "format-alt": "{:%d-%m-%Y}",
+        "timezone": "Europe/Rome"
     },
     "cpu": {
         "format": "{usage}% "
@@ -61,26 +62,6 @@
         "format-critical": "{temperatureC}°C ",
         "format": "{temperatureC}°C "
     },
-    "backlight": {
-        "device": ["HDMI-A-1", "DVI-D-1"],
-        "format": "{percent}% {icon}",
-        "states": [0,50],
-        "format-icons": ["", ""]
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -92,20 +73,6 @@
         "interval" : 7
     },
     "pulseaudio": {
-        //"scroll-step": 1,
-        /*"format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "on-click": "pavucontrol"*/
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",

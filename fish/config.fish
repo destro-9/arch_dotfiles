@@ -3,3 +3,4 @@ if status is-interactive
     eval "$(starship init fish)"
 end
 source "$HOME/.cargo/env.fish"
+set MANPATH /usr/share/man

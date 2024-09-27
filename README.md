@@ -21,3 +21,5 @@ app menu
 app menu
 ## waybar (wayland)
 css customizable launch bars
+## starship.toml
+cross-shell prompt

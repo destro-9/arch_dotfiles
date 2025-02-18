@@ -88,7 +88,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-scroll": "focus-only"
     },
     "custom/media": {
         "format": "{icon} {}",
